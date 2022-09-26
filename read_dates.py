@@ -202,9 +202,10 @@ def loadDay(date):
     year = date.year
     month = date.month
     day = date.day
-    print(getDay(year, month, day))
+    output = (getDay(year, month, day))
     if (event := getExtra(year, month, day)) != -1:
-        print(f"As an extra remark, that day is {event}.")
+        output += (f"As an extra remark, that day is {event}.")
+    return output
 
-loadDay(date.today())
-loadDay(date(2022, 10, 19))
+# loadDay(date.today())
+# loadDay(date(2022, 10, 19))
